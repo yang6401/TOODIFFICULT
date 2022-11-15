@@ -29,10 +29,10 @@ int main(){
                     generate(PATH);
                     string command1="g++ "+curpath+'/'+filename[i];
                     system(command1.c_str());
-                    system("./a.out <input.txt >ouput1.txt");
+                    system("timeout 0.1s ./a.out <input.txt >ouput1.txt");
                     string command2="g++ "+curpath+'/'+filename[j];
                     system(command2.c_str());
-                    system("./a.out <input.txt >ouput2.txt");
+                    system("timeout 0.1s ./a.out <input.txt >ouput2.txt");
                     ifstream opt1("output1.txt");
                     ifstream opt2("output2.txt");
                     char c1,c2;
